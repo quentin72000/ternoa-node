@@ -20,7 +20,7 @@ https://medium.com/ternoa/road-to-1000-nodes-150k-incentive-program-4d8ae95ede37
    - **Using On-Chain Contract Address**
      - Contract Address: `5HknN4gFaaWtrCmZRLfhThGRnr8PKYx3duH55BAM318EAyFw`
    - **Download Metadata**
-     - Download the metadata file [here](#) (Save the page as json).
+     - Download the metadata file [here](https://ipfs-mainnet.trnnfr.com/ipfs/QmcfLxDRnsM9PSusc93H8YCqM5tXQxEh1Vhm6Us1XhRCDf) (Save the page as json).
    - **Instantiate Contract**
      - Name the contract as "Ternoa Node Registration" and upload the downloaded metadata file.
 
