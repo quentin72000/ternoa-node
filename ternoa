@@ -15,9 +15,6 @@ chain_name=""
 cat 1>&2 <<EOF
                                   Welcome to TERNOA installer 
 
-# Pre-requisites
-sudo apt install build-essential git clang wget libssl-dev llvm libudev-dev cmake make protobuf-compiler -y
-
 $_divider
 Website: https://ternoa.com
 Docs: https://ternoa-2.gitbook.io/ternoa-testnet-guide/
@@ -28,6 +25,10 @@ EOF
 
 echo "$_prompt We'll be installing Ternoa via a pre-built archive at ${DOWNLOAD_URL}/"
 
+# Pre-requisites installation
+echo "$_prompt Installing pre-requisites..."
+sudo apt install build-essential git clang wget libssl-dev llvm libudev-dev cmake make protobuf-compiler -y
+echo "$_prompt Pre-requisites installed successfully."
 
 PS3='Please choose the ternoa chain environment: '
 select opt in Alphanet Mainnet
@@ -56,11 +57,10 @@ while true; do
 done
 
 wget $DOWNLOAD_URL -O /usr/bin/ternoa
+mkdir -p "/opt/ternoa/node-data"
 chmod +x "/usr/bin/ternoa"
 
 printf "\n"
-
-
 
 tee /etc/systemd/system/ternoa.service > /dev/null <<EOT
 [Unit]
@@ -68,7 +68,7 @@ Description=Ternoa Validator Node By Ternoa.com
 
 [Service]
 
-ExecStart=/usr/bin/ternoa --name ${validator_name} --chain ${TERNOA_ENV} --base-path /block/chain/node-data --ws-max-connections 1000 --prometheus-port 9615 --validator --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" --state-pruning archive
+ExecStart=/usr/bin/ternoa --name ${validator_name} --chain ${TERNOA_ENV} --base-path /opt/ternoa/node-data --ws-max-connections 1000 --prometheus-port 9615 --validator --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" --state-pruning archive
 WorkingDirectory=/usr/bin
 KillSignal=SIGINT
 Restart=on-failure
