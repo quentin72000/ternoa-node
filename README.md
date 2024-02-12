@@ -1,6 +1,8 @@
 ### Registration Process Guide, Setting Up an Archive Node with Ternoa
 
 Road to 1000 Nodes: $150K incentive program!
+Details: 
+https://medium.com/ternoa/road-to-1000-nodes-150k-incentive-program-4d8ae95ede37
 
 ![Ternoa Logo](https://miro.medium.com/v2/resize:fit:828/format:webp/1*Yv6SHHkoohYzdB-NNcJLBA.jpeg)
 
