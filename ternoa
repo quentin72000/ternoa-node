@@ -1,17 +1,16 @@
 #!/bin/bash
-PACKAGE_ROOT="${PACKAGE_ROOT:-"https://github.com/capsule-corp-ternoa/ternoa-node/releases/download"}"
-OS=""
-OS_VERSION=""
-TERNOA_ENV="mainnet"
-TERNOA_VERSION="1.3.2"
 
-DOWNLOAD_URL="https://github.com/capsule-corp-ternoa/ternoa-node/releases/download/v1.3.2/ternoa"
+TERNOA_VERSION="1.3.2"
+TERNOA_ENV="mainnet"
+
+DOWNLOAD_URL="https://github.com/capsule-corp-ternoa/ternoa-node/releases/download/v${TERNOA_VERSION}/ternoa"
+
 _divider="--------------------------------------------------------------------------------"
 _prompt=">>>"
 _indent="   "
 
 validator_name=""
-chain_name=""
+
 cat 1>&2 <<EOF
                                   Welcome to TERNOA installer 
 
@@ -27,7 +26,7 @@ echo "$_prompt We'll be installing Ternoa via a pre-built archive at ${DOWNLOAD_
 
 # Pre-requisites installation
 echo "$_prompt Installing pre-requisites..."
-sudo apt install build-essential git clang wget libssl-dev llvm libudev-dev cmake make protobuf-compiler -y
+sudo apt install build-essential git cmake protobuf-compiler -y
 echo "$_prompt Pre-requisites installed successfully."
 
 PS3='Please choose the ternoa chain environment: '
@@ -36,17 +35,17 @@ do
     case $opt in
         Alphanet)
             echo "Connecting to Mainnet ...";
-      TERNOA_ENV="alphanet"; break
-  ;;
+            TERNOA_ENV="alphanet"; break
+            ;;
         Mainnet)
             echo "Connecting to Mainnet ...";
-        TERNOA_ENV="mainnet";  break
-    ;;
-           
-        *) echo "invalid option $REPLY"; 
-    exit 1 
-    ;;   
- esac
+            TERNOA_ENV="mainnet";  break
+            ;;
+        *) 
+            echo "invalid option $REPLY"; 
+            exit 1 
+            ;;   
+    esac
 done
 
 while true; do
@@ -56,18 +55,19 @@ while true; do
     fi
 done
 
-wget $DOWNLOAD_URL -O /usr/bin/ternoa
-mkdir -p "/opt/ternoa/node-data"
-chmod +x "/usr/bin/ternoa"
+# Download Ternoa binary
+sudo wget "$DOWNLOAD_URL" -O /usr/bin/ternoa
+sudo chmod +x "/usr/bin/ternoa"
 
-printf "\n"
+# Create directory for Ternoa node data
+sudo mkdir -p "/opt/ternoa/node-data"
 
-tee /etc/systemd/system/ternoa.service > /dev/null <<EOT
+# Create systemd service file
+sudo tee /etc/systemd/system/ternoa.service > /dev/null <<EOT
 [Unit]
 Description=Ternoa Validator Node By Ternoa.com
 
 [Service]
-
 ExecStart=/usr/bin/ternoa --name ${validator_name} --chain ${TERNOA_ENV} --base-path /opt/ternoa/node-data --ws-max-connections 1000 --prometheus-port 9615 --validator --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" --state-pruning archive
 WorkingDirectory=/usr/bin
 KillSignal=SIGINT
@@ -75,15 +75,14 @@ Restart=on-failure
 LimitNOFILE=10240
 SyslogIdentifier=ternoa
 
-
 [Install]
 WantedBy=multi-user.target
 EOT
 
-systemctl daemon-reload
-systemctl enable ternoa
-systemctl start ternoa
-
+# Reload systemd and start Ternoa service
+sudo systemctl daemon-reload
+sudo systemctl enable ternoa
+sudo systemctl start ternoa
 
 printf "%s Install succeeded!\n" "$_prompt"
 printf "\n"
