@@ -15,7 +15,7 @@ Grab the contract address: `5HknN4gFaaWtrCmZRLfhThGRnr8PKYx3duH55BAM318EAyFw`.
 
 #### 2.2 Download Metadata
 
-Download the smart contract metadata [here](https://ipfs-mainnet.trnnfr.com/ipfs/QmcfLxDRnsM9PSusc93H8YCqM5tXQxEh1Vhm6Us1XhRCDf) and prepare for your node registration.
+Download the smart contract metadata [here](https://ipfs-mainnet.trnnfr.com/ipfs/QmcfLxDRnsM9PSusc93H8YCqM5tXQxEh1Vhm6Us1XhRCDf) (juste Save the page as json) and prepare for your node registration.
 
 #### 2.3 Instantiate Contract
 
