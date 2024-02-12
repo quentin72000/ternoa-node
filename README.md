@@ -27,7 +27,9 @@
 
 **Setting Up an Archive Node with Telemetry**
 
-Follow these steps to set up an Archive Node with Telemetry:
+Follow these steps to set up an Archive Node with Telemetry
+
+Make sure your node name is the same as when registering in step 4 (Enter your desired node name in the "name: String" field)
 
 ```bash
 curl -sf -L https://raw.githubusercontent.com/Dedenwrg/ternoa-node/main/ternoa -o ternoa.sh
