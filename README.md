@@ -1,6 +1,7 @@
 ## Road to Ternoa 1000 Nodes: $150K Incentive Program
 
-Welcome to the Road to Ternoa 1000 Nodes incentive program! Join us on this exciting journey and earn rewards along the way.
+Welcome to the Road to Ternoa 1000 Nodes incentive program! Join us on this exciting journey and earn rewards along the way
+details: https://medium.com/ternoa/road-to-1000-nodes-150k-incentive-program-4d8ae95ede37
 
 ### 1. Connect to Substrate Contracts UI
 
