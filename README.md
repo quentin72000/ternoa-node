@@ -1,4 +1,8 @@
-### Registration Process Guide, Setting Up an Archive Node ternoa
+### Registration Process Guide, Setting Up an Archive Node with Ternoa
+
+Road to 1000 Nodes: $150K incentive program!
+
+![Ternoa Logo](https://miro.medium.com/v2/resize:fit:828/format:webp/1*Yv6SHHkoohYzdB-NNcJLBA.jpeg)
 
 **Registration Process Guide**
 
