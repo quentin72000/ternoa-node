@@ -9,9 +9,9 @@ Visit the [Substrate Contracts UI](https://contracts-ui.substrate.io/add-contrac
 
 ### 2. Instantiate Smart Contract
 
-#### 2.1 Use On-Chain Contract Address
+#### 2.1 click Use On-Chain Contract Address
 
-Grab the contract address: `5HknN4gFaaWtrCmZRLfhThGRnr8PKYx3duH55BAM318EAyFw`.
+Paste the contract address: `5HknN4gFaaWtrCmZRLfhThGRnr8PKYx3duH55BAM318EAyFw`.
 
 #### 2.2 Download Metadata
 
@@ -19,7 +19,7 @@ Download the smart contract metadata [here](https://ipfs-mainnet.trnnfr.com/ipfs
 
 #### 2.3 Instantiate Contract
 
-Name your smart contract as "Ternoa Node registration" and upload the metadata file. Let's get your node up and running!
+Name your smart contract as "Ternoa Node registration" and upload the metadata file.
 
 ### 3. Register your node name
 
