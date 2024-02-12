@@ -66,4 +66,4 @@ systemctl stop ternoa
 
 Once setup, your node should appear here: [Telemetry Monitoring](https://telemetry.polkadot.io/#list/0x6859c81ca95ef624c9dfe4dc6e3381c33e5d6509e35e147092bfbc780f777c4e)
 
-Binary installs are available on our [GitHub Releases](https://github.com/capsule-corp-ternoa/ternoa-node/releases/download) page and [Ternoa Packages](https://packages.ternoa.network/ternoa/). Let's build the future of Ternoa together! 🚀
+Binary installs are available on our [GitHub Releases](https://github.com/capsule-corp-ternoa/ternoa-node/releases/) page and [Ternoa Packages](https://packages.ternoa.network/ternoa/). Let's build the future of Ternoa together! 🚀
