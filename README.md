@@ -1,3 +1,4 @@
+
 ### Registration Process Guide, Setting Up an Archive Node with Ternoa
 
 Road to 1000 Nodes: $150K incentive program!
@@ -22,7 +23,7 @@ https://medium.com/ternoa/road-to-1000-nodes-150k-incentive-program-4d8ae95ede37
    - **Download Metadata**
      - Download the metadata file [here](https://ipfs-mainnet.trnnfr.com/ipfs/QmcfLxDRnsM9PSusc93H8YCqM5tXQxEh1Vhm6Us1XhRCDf) (Save the page as json).
    - **Instantiate Contract**
-     - Name the contract as "Ternoa Node Registration" and upload the downloaded metadata file.
+     - Name the contract as "<!--translate:no-->Ternoa Node Registration<!--translate:no-->" and upload the downloaded metadata file.
 
 4. **Register Your Node Name**
    - Ensure you have some $CAPS in your wallet.
