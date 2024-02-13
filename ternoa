@@ -33,6 +33,7 @@ fi
 
 # Pre-requisites installation
 echo "$_prompt Installing pre-requisites..."
+sudo apt update
 sudo apt install build-essential git cmake protobuf-compiler -y
 echo "$_prompt Pre-requisites installed successfully."
 
