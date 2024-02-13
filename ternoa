@@ -15,6 +15,7 @@ cat 1>&2 <<EOF
                                   Welcome to TERNOA installer 
 
 $_divider
+This script fork from https://packages.ternoa.network/ternoa/installer
 Website: https://ternoa.com
 Docs: https://ternoa-2.gitbook.io/ternoa-testnet-guide/
 Support : https://ternoahelp.zendesk.com/hc/en-150
