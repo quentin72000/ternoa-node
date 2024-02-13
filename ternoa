@@ -43,7 +43,7 @@ select opt in Alphanet Mainnet
 do
     case $opt in
         Alphanet)
-            echo "Connecting to Mainnet ...";
+            echo "Connecting to Alphanet ...";
             TERNOA_ENV="alphanet"; break
             ;;
         Mainnet)
