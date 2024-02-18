@@ -82,7 +82,7 @@ WorkingDirectory=/usr/bin
 KillSignal=SIGINT
 Restart=on-failure
 LimitNOFILE=10240
-SyslogIdentifier=ternoa
+SyslogIdentifier=ternoa-${validator_name}
 
 [Install]
 WantedBy=multi-user.target
