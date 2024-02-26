@@ -102,6 +102,7 @@ ExecStart=/usr/bin/ternoa --name "${validator_name}" --chain ${TERNOA_ENV} --bas
 WorkingDirectory=/usr/bin
 KillSignal=SIGINT
 Restart=on-failure
+RestartSec=10s
 LimitNOFILE=10240
 SyslogIdentifier=ternoa-${short_name}
 
