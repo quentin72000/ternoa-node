@@ -102,7 +102,7 @@ while true; do
 done
 
 #Construct Ternoa command
-TERNOA_COMMAND="/usr/bin/ternoa --name $NODE_NAME --chain $CHAIN_NAME --base-path $BASE_PATH --ws-max-connections 1000  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'"
+TERNOA_COMMAND="/usr/bin/ternoa --name $NODE_NAME --chain $CHAIN_NAME --base-path $BASE_PATH --ws-max-connections 1000  --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' --telemetry-url 'ws://173.249.41.229:8001/submit/ 0'"
 
 # Prompt for Validator only if not specified in the command line
 if [ -z "$VALIDATOR" ]; then
